@@ -1,83 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
+<style>
+  .tabela-container {
+    max-width: 300px;
+    overflow-x: auto;
+  }
 
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: center;
-        }
+  .tabela-vertical {
+    float: left;
+  }
 
-        th {
-            background-color: #f2f2f2;
-        }
+  .tabela-horizontal {
+    margin-left: 10px;
+  }
 
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
+  table {
+    border-collapse: collapse;
+  }
 
-        tr:hover {
-            background-color: #ddd;
-        }
-
-        /* Estilo da div que terá a rolagem horizontal */
-        .scrollable {
-            overflow-x: auto;
-            width: 100%;
-        }
-    </style>
+  table, th, td {
+    border: 1px solid black;
+    padding: 8px;
+  }
+</style>
 </head>
 <body>
-    <div class="scrollable">
-        <table>
-            <tr>
-                <th>Nome do Jogador</th>
-                <th>Partida 1</th>
-                <th>Partida 2</th>
-                <th>Partida 3</th>
-                <th>Partida 4</th>
-                <th>Partida 5</th>
-                <th>Partida 6</th>
-                <th>Partida 7</th>
-                <th>Partida 8</th>
-                <th>Partida 9</th>
-                <th>Partida 10</th>
-                <th>Partida 11</th>
-                <th>Partida 12</th>
-                <th>Partida 13</th>
-                <th>Partida 14</th>
-                <th>Partida 15</th>
-                <th>Partida 16</th>
-                <th>Partida 17</th>
-                <th>Vitórias</th>
-            </tr>
-            <tr>
-                <td>Jogador 1</td>
-                <td>0</td>
-                <td>1</td>
-                <td>0</td>
-                <td>1</td>
-                <td>1</td>
-                <td>0</td>
-                <td>1</td>
-                <td>0</td>
-                <td>1</td>
-                <td>1</td>
-                <td>0</td>
-                <td>1</td>
-                <td>0</td>
-                <td>1</td>
-                <td>0</td>
-                <td>1</td>
-                <td>5</td>
-            </tr>
-            <!-- Adicione os outros jogadores aqui -->
-        </table>
-    </div>
+  <div class="tabela-container">
+    <table class="tabela-vertical">
+      <tr>
+        <th>Jogador</th>
+      </tr>
+      <?php
+        for ($i = 1; $i <= 18; $i++) {
+          echo "<tr><td></td></tr>";
+        }
+      ?>
+    </table>
+  </div>
+
+  <div class="tabela-container">
+    <table class="tabela-horizontal">
+      <tr>
+        <th>Partidas</th>
+        <?php
+          for ($i = 1; $i <= 17; $i++) {
+            echo "<th></th>";
+          }
+        ?>
+        <th>Vitórias</th>
+      </tr>
+      <tr>
+        <?php
+          for ($i = 0; $i <= 18; $i++) {
+            echo "<td></td>";
+          }
+        ?>
+      </tr>
+    </table>
+  </div>
 </body>
 </html>
