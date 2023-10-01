@@ -3,64 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dois Containers</title>
+    <title>Dois Containers Lado a Lado</title>
     <style>
         /* Estilo para o container pai */
         .container-pai {
             display: flex;
+            flex-wrap: wrap; /* Permite que eles quebrem para a próxima linha em telas estreitas */
         }
 
-        /* Estilo para o primeiro container com 18 jogadores */
-        #container1 {
-            width: 300px;
-            border: 2px solid #333;
-            padding: 10px;
+        /* Estilo para o container preto */
+        #container-preto {
+            flex: 1; /* Cresce para ocupar todo o espaço disponível */
+            background-color: black;
+            color: white;
+            padding: 20px;
         }
         
-        /* Estilo para cada jogador */
-        .jogador {
-            margin-bottom: 10px;
+        /* Estilo para o container cinza */
+        #container-cinza {
+            flex: 1; /* Cresce para ocupar todo o espaço disponível */
+            background-color: gray;
+            padding: 20px;
         }
 
-        /* Estilo para o segundo container com a tabela */
-        #container2 {
-            width: 400px;
-            overflow: auto; /* Adiciona uma barra de rolagem quando necessário */
-        }
-
-        /* Estilo para a tabela */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        /* Estilo para as células da tabela */
-        td {
-            border: 1px solid #333;
-            padding: 5px;
+        /* Estilo para tornar o texto centralizado no container */
+        .centralizado {
             text-align: center;
+        }
+
+        /* Estilo para tornar o texto maiúsculo */
+        .maiusculo {
+            text-transform: uppercase;
+        }
+
+        /* Estilo para fonte grande */
+        .fonte-grande {
+            font-size: 24px;
+        }
+
+        /* Estilo para fonte pequena em telas menores */
+        @media (max-width: 768px) {
+            .fonte-grande {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container-pai">
-        <div id="container1">
-            <div class="jogador">Jogador 1</div>
-            <div class="jogador">Jogador 2</div>
-            <!-- Repita isso para os 18 jogadores -->
+        <div id="container-preto" class="centralizado maiusculo fonte-grande">
+            Container Preto
         </div>
-        <div id="container2">
-            <table>
-                <?php
-                for ($i = 1; $i <= 18; $i++) {
-                    echo "<tr>";
-                    for ($j = 1; $j <= 18; $j++) {
-                        echo "<td>($i, $j)</td>";
-                    }
-                    echo "</tr>";
-                }
-                ?>
-            </table>
+        <div id="container-cinza" class="centralizado maiusculo fonte-grande">
+            Container Cinza
         </div>
     </div>
 </body>
