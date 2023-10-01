@@ -17,10 +17,15 @@
             max-height: 300px;
             overflow-y: scroll;
         }
+        .horizontal-scroll {
+            overflow-x: scroll;
+            white-space: nowrap;
+        }
     </style>
 </head>
 <body>
 
+<!-- Tabela de jogadores sem scroll horizontal -->
 <table>
     <tr>
         <th>Nome do Jogador</th>
@@ -30,17 +35,10 @@
         <th>Vitórias</th>
     </tr>
     <!-- Repita esta linha para cada jogador -->
-    <tr>
-        <td>Jogador 1</td>
-        <td><img src="imagem1.jpg" alt="Imagem 1"></td>
-        <td><img src="imagem2.jpg" alt="Imagem 2"></td>
-        <!-- Repita os campos de imagem 16 vezes -->
-        <td>10</td>
-    </tr>
-    <!-- Repita esta linha para cada jogador -->
 </table>
 
-<div class="scrollable">
+<!-- Tabela de outros dados com scroll horizontal -->
+<div class="horizontal-scroll">
     <table>
         <!-- Repita a estrutura da tabela aqui para os jogadores restantes -->
     </table>
