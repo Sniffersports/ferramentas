@@ -25,6 +25,12 @@
         .player-table td {
             padding: 10px;
         }
+        /* Adicionando posição fixa e z-index para o cabeçalho da tabela de jogadores */
+        .player-table {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
     </style>
 </head>
 <body>
@@ -35,21 +41,7 @@
         <th>Nome do Jogador</th>
         <th>Imagem</th>
         <th>Imagem</th>
-        <th>Imagem</th>
-        <th>Imagem</th>
-        <th>Imagem</th>
-        <th>Imagem</th>
-        <th>Imagem</th>
-        <th>Imagem</th>
-        <th>Imagem</th>
-        <th>Imagem</th>
-        <th>Imagem</th>
-        <th>Imagem</th>
-        <th>Imagem</th>
-        <th>Imagem</th>
-        <th>Imagem</th>
-        <th>Imagem</th>
-        <th>Imagem</th>
+        <!-- Repita os campos de imagem 16 vezes -->
         <th>Vitórias</th>
     </tr>
     <tr>
@@ -87,7 +79,15 @@
         <!-- Repita os campos de imagem 16 vezes -->
         <td>7</td>
     </tr>
+    <!-- Repita esta linha para mais jogadores -->
 </table>
+
+<!-- Tabela de outros dados com scroll horizontal -->
+<div class="horizontal-scroll">
+    <table>
+        <!-- Repita a estrutura da tabela aqui para os jogadores restantes -->
+    </table>
+</div>
 
 </body>
 </html>
