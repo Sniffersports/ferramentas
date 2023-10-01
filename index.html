@@ -3,52 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Vitórias e Derrotas</title>
+    <title>Dois Containers</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        .player-list {
-            max-height: 300px;
-            overflow-y: scroll;
-            border: 1px solid #ccc;
-            padding: 10px;
-            width: 300px; /* Defina a largura desejada */
-        }
-
-        .player-item {
+        /* Estilo para o container pai */
+        .container-pai {
             display: flex;
-            align-items: center;
+        }
+
+        /* Estilo para o primeiro container com 18 jogadores */
+        #container1 {
+            width: 300px;
+            border: 2px solid #333;
+            padding: 10px;
+        }
+        
+        /* Estilo para cada jogador */
+        .jogador {
             margin-bottom: 10px;
         }
 
-        .player-name {
-            flex-grow: 1;
+        /* Estilo para o segundo container com a tabela */
+        #container2 {
+            width: 400px;
+            overflow: auto; /* Adiciona uma barra de rolagem quando necessário */
         }
 
-        .result-checkbox {
-            width: 20px;
-            height: 20px;
-            border: 1px solid #000;
-            margin-right: 10px;
-            cursor: pointer;
+        /* Estilo para a tabela */
+        table {
+            width: 100%;
+            border-collapse: collapse;
         }
 
-        /* Estilos para quando o checkbox estiver marcado */
-        .result-checkbox.checked {
-            background-color: green;
+        /* Estilo para as células da tabela */
+        td {
+            border: 1px solid #333;
+            padding: 5px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <ul class="player-list">
-        <!-- Repita este bloco para cada jogador -->
-        <li class="player-item">
-            <div class="result-checkbox"></div>
-            <div class="player-name">Jogador 1</div>
-        </li>
-        <!-- Fim da repetição -->
-    </ul>
+    <div class="container-pai">
+        <div id="container1">
+            <div class="jogador">Jogador 1</div>
+            <div class="jogador">Jogador 2</div>
+            <!-- Repita isso para os 18 jogadores -->
+        </div>
+        <div id="container2">
+            <table>
+                <?php
+                for ($i = 1; $i <= 18; $i++) {
+                    echo "<tr>";
+                    for ($j = 1; $j <= 18; $j++) {
+                        echo "<td>($i, $j)</td>";
+                    }
+                    echo "</tr>";
+                }
+                ?>
+            </table>
+        </div>
+    </div>
 </body>
 </html>
