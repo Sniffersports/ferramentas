@@ -5,9 +5,10 @@
     text-align: center;
 }
 body {
+    background-image: url('sua-imagem.jpg');
     background-size: cover;
     background-position: center;
-
+    height: 100vh;
 }
 .data-atualizacao {
     font-size: 12px; /* Tamanho da fonte da data */
