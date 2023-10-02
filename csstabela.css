@@ -1,0 +1,30 @@
+   
+   header{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+/* Estilo para o texto da data */
+.data-atualizacao {
+    font-size: 12px; /* Tamanho da fonte da data */
+    color: red; /* Cor do texto em vermelho */
+}
+/* Estilo para a data de atualização */
+.data-atualizacao {
+    color: red; /* Cor do texto em vermelho */
+    font-size: 14px; /* Tamanho da fonte da data */
+}
+iframe {
+    border: none;
+    width: 61.5%;
+    height: 27.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Media query para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    iframe {
+        width: 90%; /* Largura para dispositivos móveis */
+    }
+}
