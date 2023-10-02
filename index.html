@@ -39,15 +39,22 @@
         .container {
             width: 78rem;
             height: 37rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-left:3rem;
+            display: block;
+
         }
         iframe {
             width: 77%;
             height: 86%;
             opacity: 0.8;
+        }
+
+        @media (min-width: 769px) {
+            .container {
+                display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left:3rem;
+            }
         }
         @media (max-width: 768px) {
             
@@ -56,8 +63,6 @@
     text-align: center;
     display: block;
     width: 100%; 
-    justify-content: left;
-    align-items: left;}
             
     body {
         background-position: center;
