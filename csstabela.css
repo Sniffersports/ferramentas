@@ -4,7 +4,11 @@
     color: white;
     text-align: center;
 }
-/* Estilo para o texto da data */
+body {
+    background-size: cover;
+    background-position: center;
+
+}
 .data-atualizacao {
     font-size: 12px; /* Tamanho da fonte da data */
     color: red; /* Cor do texto em vermelho */
@@ -16,15 +20,17 @@
 }
 iframe {
     border: none;
-    width: 61.5%;
+    width: 68.5%;
     height: 27.5rem;
     display: block;
     margin-left: auto;
     margin-right: auto;
+
 }
-/* Media query para dispositivos móveis */
-@media screen and (max-width: 768px) {
-    iframe {
-        width: 90%; /* Largura para dispositivos móveis */
+
+
+@media screen and (min-width: 769px)  {
+    html {
+        overflow: hidden;
     }
 }
