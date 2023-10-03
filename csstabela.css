@@ -31,6 +31,6 @@ iframe {
 }
 @media (max-width: 768px) {
     iframe {
-        height: 60vh;
+        height: 65vh;
     }
 }
