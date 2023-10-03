@@ -1,37 +1,36 @@
-   
-   header{
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://d2gg9evh47fn9z.cloudfront.net/1600px_COLOURBOX2171181.jpg');
+    background-size: cover; /* Para ajustar a imagem ao tamanho da tela */
+    background-repeat: no-repeat; /* Para evitar a repetição da imagem */
+    background-attachment: fixed; /* Para manter a imagem fixa enquanto você rola a página */
+}
+header {
     background-color: black;
     color: white;
     text-align: center;
+    padding: 20px 0;
 }
-body {
-    background-image: url('https://i.imgur.com/9ODT5Vd.png');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+h2 {
+    font-size: 24px;
 }
-.data-atualizacao {
-    font-size: 12px; /* Tamanho da fonte da data */
-    color: red; /* Cor do texto em vermelho */
-}
-/* Estilo para a data de atualização */
-.data-atualizacao {
-    color: red; /* Cor do texto em vermelho */
-    font-size: 14px; /* Tamanho da fonte da data */
+.date {
+    font-size: 10px;
+    color: red;
+    position: absolute;
+    top: 0;
+    left: 10px;
 }
 iframe {
-    border: none;
-    width: 68.5%;
-    height: 27.5rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
+    width: 90%;
+    height: 70vh;
+    margin-left:5%;
+    opacity:0.9;
 }
-h1 {margin-top:-7px;}
-
-@media screen and (min-width: 769px)  {
-    html {
-        overflow: hidden;
+@media (max-width: 768px) {
+    iframe {
+        height: 60vh;
     }
 }
